@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="27-04.css">
+  <title>Jogo Par ou Ímpar</title>
+</head>
+
+<body>
+  <img src="https://www.bing.com/th/id/OGC.cc0c24bdd8f908bbe069473fee90bd6e?o=7&pid=1.7&rm=3&rurl=https%3a%2f%2fusagif.com%2fwp-content%2fuploads%2fgifs%2fcoin-flip-17.gif&ehk=fR6jWJYKOzoT8qRVYtx0yH7bkqy1ubqrcvbxqs8FU1I%3d" alt="Ilustração de Jogo Par ou Ímpar">
+  <h1>Jogo de Sorte:<br>
+    Par ou Ímpar
+  </h1>
+  <p>Nome do Jogador:
+    <input type="text" id="inNome">
+  </p>
+  <p>O número gerado será: 
+    <input type="radio" name="parImpar" id="rbPar"> Par
+    <input type="radio" name="parImpar" id="rbImpar"> Ímpar
+  </p>
+  <p>
+    <input type="button" value="Jogar Par/Ímpar" id="btJogar">
+  </p>
+  <h3 id="outNumeroGerado"></h3>
+  <h3 id="outResultadoJogo"></h3>
+  <h3 id="outPontuação"></h3>
+  <h3 id="outClicks"></h3>
+  <h3 id="outPorcentagemAcertos"></h3>
+  <h3> Lista de Recordes </h3>
+  
+  <script src="27-04.js"></script>
+
+  <div id="outAtualizarPontuacao"></div>
+  <div id="outRecordes"></div>
+</body>
+
+</html>
