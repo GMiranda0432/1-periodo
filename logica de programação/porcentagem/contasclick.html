@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo idle de click</title>
+</head>
+
+<body>
+
+    <h3> clique para acumular pontos, use o botão 1 para ganhar pontos, o botão 2 para mostrar a quantidade atual, e o
+        botão 3 para apagar:</h3>
+
+    <button id="clickButton1">acumular click</button>
+    <button id="clickButton2">mostrar cliques</button>
+    <button id="clickButton3">apagar cliques</button>
+
+    <hr> pontos acumulados: <span id="clickCount">0</span>
+    <script>
+        const clickCountDisplay = document.getElementById('clickCount');
+        const clickButton1 = document.getElementById('clickButton1');
+        const clickButton2 = document.getElementById('clickButton2');
+        const clickButton3 = document.getElementById('clickButton3');
+        var clickCount = 0;
+        
+        clickButton1.addEventListener('click', () => {
+            clickCount++;
+        });
+
+        clickButton2.addEventListener('click', () => {
+            alert(`Valor atual: ${clickCount}`);
+            clickCountDisplay.textContent = clickCount;
+        });
+        clickButton3.addEventListener('click', () => {
+            clickCount = 0;
+            clickCountDisplay.textContent = clickCount;
+        });
+        clickButton1.addEventListener('click', () => {
+            clickCountDisplay.textContent = clickCount;
+        });
+    </script>
+</body>
+
+</html>
