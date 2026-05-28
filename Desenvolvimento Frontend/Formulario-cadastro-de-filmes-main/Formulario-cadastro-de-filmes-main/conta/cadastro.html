@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <h1>Cadastro de conta</h1>
+    <il>
+        <li><a href="login.html">Login</a></li>
+    </il>
+    <h3>Crie sua conta para acessar o formulário de cadastro de filmes</h3>
+    <form action="#" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br>
+
+        <label for="confirmar_senha">Confirmar Senha:</label>
+        <input type="password" id="confirmar_senha" name="confirmar_senha" required><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+    <script>
+        addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if (email.value !== "" && senha.value !== "" && nome.value !== "" && confirmar_senha.value !== "") {
+                alert('Enviado com sucesso!');
+            } else {
+                alert('Erro no envio, há um erro no meu código :,]. Você não deveria ser capaz de receber essa mensagem');
+            }
+        });
+    </script>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../sobre.html">Avaliações</a></li>
+            <li><a href="formularioFilmes.html">Formulário</a></li>
+            <li><a href="../contato.html">Sugestões</a></li>
+            <li><a href="../explication.html">Resenhas</a></li>
+            <li><a href="../landingpage.html">Landing Page</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
