@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Filme</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select,
+        textarea,
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <header>
+        <h1>Cadastro de Filmes no nosso cinema</h1>
+    </header>
+
+    <section>
+        <h2>Sobre o Cinema MontSerrat</h2>
+        <p>O Cinema MontSerrat é um dos cinemas mais tradicionais da cidade, oferecendo uma experiência única para os
+            amantes de filmes. Com salas confortáveis e uma seleção diversificada de filmes, nosso cinema é o lugar
+            perfeito para desfrutar de uma noite de entretenimento.</p>
+        <nav>
+            <ul>
+                <li><a href="formularioFilmes.html">Formulário</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html">Início</a></li>
+            </ul>
+        </nav>
+        <main>
+            <form action="#" method="post">
+
+
+                <label for="nome_filme">Nome do Filme:</label><br>
+                <input type="text" id="nome_filme" name="nome_filme" required><br><br>
+                <label for="nome_empresa">Nome da sua empresa:</label><br>
+                <input type="text" id="nome_empresa" name="nome_empresa" required><br><br>
+                <label for="email_responsavel">Email:</label><br>
+                <input type="email" id="email_responsavel" name="email_responsavel" required
+                    oninvalid="this.setCustomValidity('Por favor, insira um email válido com @.com na frente')"><br><br>
+                <label for="telefone">Telefone: (XX) XXXXX-XXXX</label><br>
+                <input type="text" id="telefone" name="telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" required
+                    oninvalid="this.setCustomValidity('Por favor, insira um telefone válido no formato (XX) XXXXX-XXXX')"><br><br>
+                <label for="cep">Cep da exibição: <br> (XXXXX-XXX)</label><br>
+                <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" required
+                    oninvalid="this.setCustomValidity('Por favor, diga um CEP válido no formato XXXXX-XXX, não deixe em branco')"><br><br>
+                <label for="senha">Senha:</label><br>
+                <input type="password" id="senha" name="senha" pattern=".{6,}"
+                    title="A senha deve ter pelo menos 6 caracteres" required
+                    oninput="this.setCustomValidity('Por favor, insira uma senha válida com pelo menos 6 caracteres, não é dificil')"><br><br>
+
+                <label for="ano">Ano de Lançamento:</label><br>
+                <input type="number" id="ano" name="ano_lancamento" min="1900" max="2026"
+                    oninvalid="this.setCustomValidity('Por favor, insira um ano válido entre 1900 e 2026')"><br><br>
+
+
+                <label for="genero">Gênero:</label><br>
+                <select id="genero" name="genero">
+                    <option value="acao">Ação</option>
+                    <option value="comedia">Comédia</option>
+                    <option value="terror">Terror</option>
+                    <option value="romance">Romance</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="fantasia">Fantasia</option>
+                </select><br><br>
+
+                <label for="subgenero">Sub-Gênero:</label><br>
+                <select id="subgenero" name="subgenero">
+                    <option value="acao">Ação</option>
+                    <option value="comedia">Comédia</option>
+                    <option value="terror">Terror</option>
+                    <option value="romance">Romance</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="fantasia">Fantasia</option>
+                </select><br><br>
+
+                <label for="agencia">Agência do filme:</label><br>
+                <select id="agencia" name="agencia">
+                    <option value="paramount">Paramount</option>
+                    <option value="comedia">Cinemark</option>
+                    <option value="netflix">Netflix</option>
+                    <option value="hbo">HBO</option>
+                    <option value="warner">Warner</option>
+                    <option value="disney">Disney</option>
+                </select><br><br>
+
+
+                <p>Classificação Indicativa:</p>
+                <input type="radio" id="livre" name="classificacao" value="livre">
+                <label for="livre">Livre</label><br>
+                <input type="radio" id="maior10" name="classificacao" value="10+">
+                <label for="maior10">10+</label><br>
+                <input type="radio" id="maior12" name="classificacao" value="12+">
+                <label for="maior12">12+</label><br>
+                <input type="radio" id="maior16" name="classificacao" value="14+">
+                <label for="maior16">14+</label><br>
+                <input type="radio" id="maior18" name="classificacao" value="16+">
+                <label for="maior18">16+</label><br>
+                <input type="radio" id="maior18" name="classificacao" value="18+">
+                <label for="maior18">18+</label><br><br>
+
+
+                <p>Características do Filme:</p>
+                <input type="checkbox" name="caracteristicas" value="dublado"> Dublado<br>
+                <input type="checkbox" name="caracteristicas" value="legendado"> Legendado<br>
+                <input type="checkbox" name="caracteristicas" value="3d"> 3D<br><br>
+
+
+                <label for="descricao">Descrição:</label><br>
+                <textarea id="descricao" name="descricao" rows="4" cols="40" minlength="10" required></textarea><br><br>
+
+                <label for="duracao">Duração (em minutos):</label><br>
+                <input type="number" id="duracao" name="duracao" min="1" required><br><br>
+
+                <label for="cartaz">URL do Cartaz do Filme:</label><br>
+                <input type="text" id="cartaz" name="cartaz"><br><br>
+
+                <label for="diainicio">Dia de estreia:</label><br>
+                <input type="date" id="diainicio" name="diainicio" required><br><br>
+
+                <label for="diafim">Último dia no cartaz:</label><br>
+                <input type="date" id="diafim" name="diafim" required><br><br>
+
+                <input type="submit" value="Enviar">
+
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Cinema MontSerrat. Todos os direitos reservados.</p>
+        </footer>
+</body>
+
+</html>
