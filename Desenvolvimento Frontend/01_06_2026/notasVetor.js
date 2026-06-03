@@ -2,8 +2,9 @@ const inputNotas = document.getElementById("InNotas");
 const btAdicionar = document.getElementById("btAdicionar");
 const btMedia = document.getElementById("btMedia");
 const listaNotasEl = document.getElementById("listaNotas");
+const btMostrar = document.getElementById("btMostrar");
 
-let Notas = [];
+var Notas = [];
 
 function updateList() {
     listaNotasEl.innerHTML = '';
@@ -15,13 +16,13 @@ function updateList() {
 }
 
 function adicionarNota() {
-    const nota = parseFloat(inputNotas.value);
-    if (!isNaN(nota)) {
+    var nota = parseFloat(inputNotas.value);
+    if (!isNaN(nota) && nota >= 0 && nota <= 100) {
         Notas.push(nota);
         inputNotas.value = "";
         updateList();
     } else {
-        alert('Digite uma nota válida antes de adicionar.');
+        alert('Digite uma nota válida entre 0 e 100 para funcionar.');
     }
 }
 
@@ -34,5 +35,6 @@ function verMedia() {
         alert("Nenhuma nota foi adicionada.");
     }
 }
+
 btAdicionar.addEventListener('click', adicionarNota);
 btMedia.addEventListener('click', verMedia);
