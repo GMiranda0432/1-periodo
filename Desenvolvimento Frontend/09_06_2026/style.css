@@ -1,0 +1,37 @@
+body {
+    font-family: sans-serif;
+    padding: 2rem;
+    transition: background 0.3s;
+}
+
+.tema-escuro {
+    background: #1a1a2e;
+    color: #eee;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.25rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+}
+
+#mensagem {
+    color: green;
+    margin-top: 0.5rem;
+}

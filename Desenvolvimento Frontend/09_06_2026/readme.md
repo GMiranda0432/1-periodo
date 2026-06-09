@@ -1,0 +1,1 @@
+teste de uso do local storage usando inspecionar
