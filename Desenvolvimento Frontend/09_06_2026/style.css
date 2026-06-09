@@ -1,37 +1,107 @@
-body {
-    font-family: sans-serif;
-    padding: 2rem;
-    transition: background 0.3s;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.tema-escuro {
-    background: #1a1a2e;
-    color: #eee;
+body {
+    font-family: sans-serif;
+    background: #f0f2f5;
+    padding: 2rem;
 }
 
 .container {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 0auto;
 }
 
-label {
+h1 {
+    margin-bottom: 1.5rem;
+}
+
+form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 02px 8px rgba(0, 0, 0, .1);
+    margin-bottom: 1.5rem;
+}
+
+form input {
     display: block;
-    margin: 1rem 0 0.25rem;
+    width: 100%;
+    padding: .6rem;
+    margin-bottom: .8rem;
+    border: 1pxsolid #ccc;
+    border-radius: 6px;
 }
 
-input,
-select {
-    width: 100%;
-    padding: 0.5rem;
+.botoes-form {
+    display: flex;
+    gap: .5rem;
 }
 
 button {
-    margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
+    padding: .6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
 }
 
-#mensagem {
-    color: green;
-    margin-top: 0.5rem;
+#btnSalvar {
+    background: #4CAF50;
+    color: #fff;
+}
+
+#btnCancelar {
+    background: #aaa;
+    color: #fff;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.card-contato {
+    background: #fff;
+    padding: 1rem1.2rem;
+    border-radius: 8px;
+    margin-bottom: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 01px 4px rgba(0, 0, 0, .08);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.info strong {
+    font-size: 1rem;
+}
+
+.info span {
+    font-size: .85rem;
+    color: #555;
+}
+
+.acoes {
+    display: flex;
+    gap: .5rem;
+}
+
+.acoesbutton {
+    background: none;
+    font-size: .85rem;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.vazio {
+    color: #888;
+    text-align: center;
+    margin-top: 1rem;
 }
