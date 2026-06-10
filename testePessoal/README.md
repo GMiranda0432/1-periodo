@@ -1,5 +1,7 @@
 # Projeto Shooter Inspirado em Undertale Yellow
 
+<!-- devo lembrar de aumentar sprites do dash para animação de 12 frames, mudar o dash duration e adicionar a alma cinza, talvez mudar as outras almas seja uma boa. deixar esse read.me todo como comentário até um dia eu o colocar num repositório de verdade
+
 > ⚠️ **AVISO:** As músicas presentes neste projeto possuem copyright. Este projeto é apenas uma recriação pessoal para fins educacionais e de estudo.
 >
 > Não vejo problemas em utilizar os arquivos da pasta para referência, porém tome cuidado caso utilize as músicas em outros projetos.
