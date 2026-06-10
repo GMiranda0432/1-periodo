@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partida de futebol</title>
+</head>
+
+<body>
+    <h1>Resultado da partida de futebol</h1>
+    <h2> informe a quantidade de gols de cada time</h2>
+    <h2> caso um os times tenha uma diferença de 2 gols a mais, foi uma goleada</h2>
+    <form>
+        <label for="time1">Time 1:</label>
+        <input type="number" id="time1" name="time1" required>
+        <br>
+        <label for="time2">Time 2:</label>
+        <input type="number" id="time2" name="time2" required>
+        <br>
+        <input type="submit" value="Resultado">
+    </form>
+    <div id="resultado"></div>
+    <script>
+
+        const form = document.querySelector('form');
+        const resultadoDiv = document.getElementById('resultado');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const time1Gols = parseInt(document.getElementById('time1').value);
+            const time2Gols = parseInt(document.getElementById('time2').value);
+            let resultado;
+            if (time1Gols < 0 || time2Gols < 0) {
+                resultado = 'erro, não existe gol negativo, preencha aí';
+            } else if (time1Gols > time2Gols) {
+                resultado = `Time 1 venceu contra time 2. `;
+                if (time1Gols - time2Gols >= 2) {
+                    resultado += 'Foi uma goleada!';
+                }
+            } else if (time2Gols > time1Gols) {
+                resultado = `Time 2 venceu contra time 1. `;
+                if (time2Gols - time1Gols >= 2) {
+                    resultado += 'Foi uma goleada!';
+                }
+            } else {
+                resultado = 'Empate!';
+            }
+
+            resultadoDiv.textContent = resultado;
+        });
+    </script>
+</body>
+
+</html>
