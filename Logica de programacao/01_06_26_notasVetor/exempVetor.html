@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores - Exemplo</title>
+</head>
+
+<body>
+    <h1>Cadastro de Produtos</h1>
+    <div>
+        <p>Descrição: <input type="text" id="inDescricao"></p>
+        <p>Índice: <input type="number" id="inIndice"></p>
+        <p>Operações:
+            <select id="slOperaVetor">
+                <option value="" disabled selected>Selecione a Operação:</option>
+                <option value="inserirInicio">Inserir no Início</option>
+                <option value="inserirFim">Inserir no Fim</option>
+                <option value="alterar">Alterar Elemento</option>
+                <option value="removerInicio">Remover do Início</option>
+                <option value="removerFim">Remover do Fim</option>
+                <option value="procurar">Procurar</option>
+                <option value="mostrarVetor">Mostrar Vetor</option>
+                <option value="mostrarElemento">Mostrar Elemento</option>
+            </select>
+        </p>
+    </div>
+    <h3 id="outSaida"></h3>
+    <script src="exempVetor.js"></script>
+</body>
+
+</html>

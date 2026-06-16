@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa</title>
+</head>
+
+<body>
+    <h1>Gestão de Pessoas</h1>
+    <h3>Dados do colaborador</h3>
+    <hr>
+    <p>Nome: <input type="text" id="inNome"></p>
+    <p>Cargo:<select id="inCargo" name="inCargo">
+        <option value="gerencia">Gerência</option>
+        <option value="administrativo">Administrativo</option>
+        <option value="vendedor">Vendedor</option>
+    </select></p>
+    <p>Salário: R$<input type="number" id="inSalario"></p>
+    <p>Sexo Biológico: <select id="inSexo" name="inSexo">
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="intersex">Intersex</option>
+    </select></p>
+
+
+    <hr>
+    <button id="btRegistro">Registrar</button>
+    <button id="btConsult">Consultar Nome</button>
+    <button id="btVendedor">Mostrar Vendedores(as)</button>
+    <button id="btMedia">Média Salários Sexo</button>
+
+    <p id="outRegistro"></p>
+    <p id="outConsult"></p>
+    <p id="outVendedor"></p>
+    <p id="outMedia"></p>
+    <script src="script.js"></script>
+</body>
+
+</html>
